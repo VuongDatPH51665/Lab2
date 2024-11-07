@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvTODOLIST"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TODOLiST"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:textSize="26sp"
+        android:textStyle="bold"
+
+        />
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputTitle"
+        android:layout_width="match_parent"
+        app:boxBackgroundMode="none"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvTODOLIST">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="#940F0F"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:hint="Title: "
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputContent"
+        android:layout_width="match_parent"
+        app:boxBackgroundMode="none"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/inputTitle">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="#940F0F"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:hint="Content: "
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputDate"
+        android:layout_width="match_parent"
+        app:boxBackgroundMode="none"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/inputContent">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="#940F0F"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:hint="Date: "
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputType"
+        android:layout_width="match_parent"
+        app:boxBackgroundMode="none"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/inputDate">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="#940F0F"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:hint="Type: "
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_below="@id/inputType"
+        android:textColor="@color/white"
+        android:text="ADD"
+        android:textSize="30sp"
+        android:backgroundTint="#61B21B"
+        />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnAdd"
+            />
+
+</RelativeLayout>
